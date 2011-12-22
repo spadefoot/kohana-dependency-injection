@@ -1,0 +1,4 @@
+Changelog for Dependency Injection Module
+
+2011-12-22
+* Initial commit
