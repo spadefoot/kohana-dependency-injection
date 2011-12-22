@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects default-init-method="init">
+    <object id="tester" type="Tester" init-method="init">
+        <constructor-arg>
+            <list>
+                <value type="string">        Spadefoot</value>
+                <value type="string" xml:space="preserve">        Spadefoot</value>
+                <value type="int">1234567890</value>
+                <ref object="csv" />
+                <ref object="csv" />
+                <map>
+                    <entry key="dog">
+                        <value type="integer">34566</value>
+                    </entry>
+                    <entry key="cat" type="integer" value="34566" />
+                    <entry key="csv" value-ref="csv" />
+                </map>
+                <null />
+                <value />
+            </list>
+        </constructor-arg>
+    </object>
+    <object id="factory" type="Tester" factory-method="factory">
+        <constructor-arg value="spadefoot" />
+    </object>
+    <object id="csv" type="CSV" />
+    <object id="ifactory" factory-object="factory" factory-method="make_object">
+        <constructor-arg value="mouse" />
+    </object>
+</objects>
